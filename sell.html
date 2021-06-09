@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<title>sell your books</title>
+  <link rel="icon" href="images/titleimage.ico" />
+	<link rel="stylesheet" type="text/css" href="styling.css">
+  <script type='text/javascript'>
+function preview_image(event) 
+{
+ var reader = new FileReader();
+ reader.onload = function()
+ {
+  var output = document.getElementById('output_image');
+  output.src = reader.result;
+ }
+ reader.readAsDataURL(event.target.files[0]);
+}
+</script>
+  </head>
+  <body>
+     
+         <div class="header">
+                <a href="home.html"><img title="Go To Home" src="images/logo.png" alt="logo" height="100" width="70"></a>
+              <h1>UsedBooks.com</h1>
+              <h2>Buy and Sell Used Books</h2>
+              <div>
+                   <ul>
+	                    <li><a href="home.html">HOME</a></li>
+	                    <li><a  href="login.php">LOG IN</a></li>
+	                    <li><a class="active" href="sell.html">SELL</a></li>
+	                    <li><a href="aboutus.php">ABOUT US</a></li>
+                   </ul>
+              </div>
+          </div>
+          <div class="post_book_form">
+            
+              <h2>Post your Book for sell</h2>
+  	            <form>
+                  <div class="selectimage" id="imagePreview" style="background-image: url(images/upload_pic.png);">
+                    
+                  <input class="book_image"  onchange="preview_image(event)" title="Choose Book Image" type="file" accept=".png, .jpg, .jpeg" name="book_image" required>
+                  <img class="preview_pic" id="output_image"/>
+                 </div>
+                 <div class="sell_inputs">
+                 <label for="book_name">Name of Book</label>
+                 <input class="userinput" type="text" name="book_name" required><br>
+                 
+                 <label for="bookwriter">Name of writer</label>
+                 <input class="userinput" type="text" name="bookwriter" required><br>
+
+                 <label for="publisher">Publisher</label>
+                 <input class="userinput" type="text" name="publisher" required><br>
+                 
+                 <label for="isbn_no">ISBN no.</label>
+                 <input class="userinput" type="text" name="isbn_no" ><br>
+                  
+                 <label for="category">Category</label>
+                 <select class="userinput" type="" name="category" required>
+                 <option>Art & Music</option>
+                 <option value="Biographies">Biographies</option>
+                 <option value="Business">Business</option>
+                 <option value="Kids">Kids</option>
+                 <option value="Comics">Comics</option>
+                 <option value="Computers & Tech">Computers & Tech</option>
+                 <option value="Cooking">Cooking</option>
+                 <option value="Hobies & Craft">Hobies & Craft</option>
+                 <option value="Education & Reference">Education & Reference</option>
+                 <option value="Health & Fitness">Health & Fitness</option>
+                 <option value="History">History</option>
+                 <option value="Home & Garden">Home & Garden</option>
+                 <option value="Horror">Horror</option>
+                 <option value="Enntertainment">Enntertainment</option>
+                 <option value="Literature & Fiction">Literature & Fiction</option>
+                 <option value="Medical">Medical</option>
+                 <option value="Mysteries">Mysteries</option>
+                 <option value="Parenting">Parenting</option>
+                 <option value="Social Sciences">Social Sciences</option>
+                 <option value="Religion">Religion</option>
+                 <option value="Romance">Romance</option>
+                 <option value="Science & Math">Science & Math</option>
+                 <option value="Sports">Sports</option>
+                 <option value="Travel">Travel</option>
+                 <option value="Magzine">Magzine</option>
+                 <option value="Question Bank">Question Bank</option>
+               </select><br>
+
+                 <label for="book_price">Price</label>
+                 <input class="userinput" type="text" name="book_price" required><br>
+                
+                <input class="button1" type="submit" name="submit" value="SUBMIT">
+              </form>
+             </div>
+               
+              
+            </div>
+                      <div class="footer">
+  	                       <p>&copycopyright 2019 UsedBooks.com</p>
+                       </div>
+      
+  </body>
+</html>

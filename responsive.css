@@ -1,0 +1,36 @@
+@media only screen and (max-width: 850px) {
+  body {
+    background-color: lightblue;
+  }
+
+.fake-input{
+	width: 300px;
+	height: 40px;
+}
+.fake-input img{
+	width: 20px;
+	height: 20px;
+}
+.button{
+	width: 70px;
+	height: 40px;
+}
+.homeContents{
+	margin:10px;
+	padding:0px 0px 0px 60px; 
+}
+.homePosts{
+	width: 220px;
+	height: 300px;
+	padding: 10px;
+
+}
+.homePosts img{
+	width: 100px;
+	height: 100px;
+}
+.loginform{
+	margin: 5% 10% 5% 20%; 
+}
+
+}
